@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useLayoutEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -12,9 +13,11 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>HomeScreen</Text>
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={styles.text}>HomeScreen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
