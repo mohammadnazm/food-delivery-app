@@ -25,9 +25,7 @@
     "react-native-web": "^0.19.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31"
+    "@babel/core": "^7.20.0"
   },
   "private": true
 }
