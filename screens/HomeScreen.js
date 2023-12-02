@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { SafeAreaView, Text, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { ChevronDownIcon } from "react-native-heroicons";
+import Icon from "react-native-vector-icons/Feather";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -28,9 +28,11 @@ const HomeScreen = () => {
             </Text>
             <Text className="font-bold text-xl">
               Current Location!
-              <ChevronDownIcon size={30} color="black" />
+              <Icon name="chevron-down" size={20} color="#000" />
             </Text>
           </View>
+
+          <Icon name="user" size={30} color="#000" />
         </View>
       </Text>
     </SafeAreaView>
