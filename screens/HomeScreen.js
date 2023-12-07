@@ -16,7 +16,7 @@ const HomeScreen = () => {
     <SafeAreaView className="bg-white">
       <Text></Text>
       {/* Header */}
-      <View className="flex-row justify-between items-center mt-4">
+      <View className="flex-row justify-between items-center mt-10">
         {/* Left side */}
         <View className="flex-row items-center">
           <Image
