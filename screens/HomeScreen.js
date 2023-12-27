@@ -1,5 +1,12 @@
 import React, { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View, Image, TextInput } from "react-native";
+import {
+  SafeAreaView,
+  Text,
+  View,
+  Image,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
 
@@ -37,6 +44,7 @@ const HomeScreen = () => {
         {/* Right side */}
         <Icon name="user" size={30} color="#00CCBB" />
       </View>
+
       {/* Search */}
       <View className="flex-row items-center space-x-2 pb-2 mx-4">
         <View className="flex-row flex-1 space-x-2 bg-gray-200 p-3">
@@ -48,6 +56,13 @@ const HomeScreen = () => {
         </View>
         <Icon name="filter" size={30} color="#00CCBB" />
       </View>
+
+      {/* Body */}
+      <ScrollView>
+        {/* Categories */}
+
+        {/* Featured Rows */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
