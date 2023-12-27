@@ -28,20 +28,19 @@ const HomeScreen = () => {
               Deliver Now!
             </Text>
             <Text className="font-bold text-xl">
-              Current Location!{" "}
-              <Icon name="chevron-down" size={20} color="#000" />
+              Current Location!
+              <Icon name="chevron-down" size={20} color="#00CCBB" />
             </Text>
           </View>
         </View>
 
         {/* Right side */}
-        <Icon name="user" size={30} color="#000" />
-
-        {/* Search */}
-        <View>
-          <View></View>
-          <Icon name="filter" size={30} color="#000" />
-        </View>
+        <Icon name="user" size={30} color="#00CCBB" />
+      </View>
+      {/* Search */}
+      <View>
+        <View></View>
+        <Icon name="filter" size={30} color="#00CCBB" />
       </View>
     </SafeAreaView>
   );
