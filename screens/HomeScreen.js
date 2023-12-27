@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View, Image } from "react-native";
+import { SafeAreaView, Text, View, Image, TextInputBase } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
 
@@ -39,7 +39,10 @@ const HomeScreen = () => {
       </View>
       {/* Search */}
       <View>
-        <View></View>
+        <View>
+          <Icon name="search" size={30} color="#00CCBB" />
+          <TextInputBase placeholder="Restaurants and cuisines" />
+        </View>
         <Icon name="filter" size={30} color="#00CCBB" />
       </View>
     </SafeAreaView>
