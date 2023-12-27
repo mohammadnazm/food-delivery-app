@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { SafeAreaView, Text, View, Image, TextInputBase } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
+import { TextInput } from "react-native-web";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -41,7 +42,7 @@ const HomeScreen = () => {
       <View>
         <View>
           <Icon name="search" size={30} color="#00CCBB" />
-          <TextInputBase placeholder="Restaurants and cuisines" />
+          {/* <TextInput placeholder="Restaurants and cuisines" /> */}
         </View>
         <Icon name="filter" size={30} color="#00CCBB" />
       </View>
