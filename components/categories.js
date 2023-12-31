@@ -1,12 +1,16 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, ScrollView } from "react-native";
 
 const Categories = () => {
   return (
     <ScrollView
-      contentContainerStyle={{ paddingHorizontal: 15, paddingTop: 10 }}
+      contentContainerStyle={{
+        paddingHorizontal: 15,
+        paddingTop: 10,
+        backgroundColor: "lightgray",
+      }}
       horizontal
-      showsHorizontalScroll={false}
+      showsHorizontalScrollIndicator={false}
     >
       {/* Category Card */}
       <Text>Categories Hello</Text>
