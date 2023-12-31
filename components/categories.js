@@ -3,9 +3,9 @@ import { Text, View } from "react-native";
 
 const Categories = () => {
   return (
-    <View>
+    <ScrollView>
       <Text>Categories Hello</Text>
-    </View>
+    </ScrollView>
   );
 };
 
