@@ -3,7 +3,11 @@ import { Text, View } from "react-native";
 
 const Categories = () => {
   return (
-    <ScrollView>
+    <ScrollView
+      contentContainerStyle={{ paddingHorizontal: 15, paddingTop: 10 }}
+      horizontal
+      showsHorizontalScroll={false}
+    >
       {/* Category Card */}
       <Text>Categories Hello</Text>
     </ScrollView>
