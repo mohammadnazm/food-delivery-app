@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
-import Categories from "./components/Categories";
+import Categories from "../components/categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
