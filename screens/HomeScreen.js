@@ -10,6 +10,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Feather";
 import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -64,6 +65,23 @@ const HomeScreen = () => {
         <Categories />
 
         {/* Featured Rows */}
+        <FeaturedRow
+          title="Featured"
+          description="Paid placements from our partners"
+          featuredCategory="featured"
+        />
+
+        <FeaturedRow
+          title="Tasty Discounts"
+          description="Paid placements from our partners"
+          featuredCategory="featured"
+        />
+
+        <FeaturedRow
+          title="Offers near you!"
+          description="Paid placements from our partners"
+          featuredCategory="featured"
+        />
       </ScrollView>
     </SafeAreaView>
   );
