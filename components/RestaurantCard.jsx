@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { urlFor } from "../sanity";
 
 const RestaurantCard = ({
   id,
@@ -16,7 +17,10 @@ const RestaurantCard = ({
 }) => {
   return (
     <TouchableOpacity className="bg-white mr-3 shadow">
-      <Image source={{ uri: imgUrl }} className="h-36 w-64 rounded-sm" />
+      <Image
+        source={{ uri: urlFor(imgUrl).url() }}
+        className="h-36 w-64 rounded-sm"
+      />
       <View>
         <Text className="font-bold text-lg pt-2">{title}</Text>
         <View className="flex-row items-center space-x-1">

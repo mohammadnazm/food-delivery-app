@@ -1,8 +1,23 @@
-import React from "react";
-import { Text, ScrollView } from "react-native";
+import React, { useEffect, useState } from "react";
+import { ScrollView } from "react-native";
 import CategoryCard from "./CategoryCard";
+import client from "../sanity";
 
 const Categories = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `
+    *[_type == "category"]
+    `
+      )
+      .then((data) => {
+        setCategories(data);
+      });
+  }, []);
+
   return (
     <ScrollView
       contentContainerStyle={{
