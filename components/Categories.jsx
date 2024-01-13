@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView } from "react-native";
-import CategoryCard from "./CategoryCard";
+import CategoryCard from "./CategoriesCard";
 import client, { urlFor } from "../sanity";
 
 const Categories = () => {
@@ -14,6 +14,7 @@ const Categories = () => {
     `
       )
       .then((data) => {
+        console.log("data", data);
         setCategories(data);
       });
   }, []);
@@ -27,7 +28,6 @@ const Categories = () => {
       horizontal
       showsHorizontalScrollIndicator={false}
     >
-      {/* Category Card */}
       {categories.map((category) => (
         <CategoryCard
           key={category._id}

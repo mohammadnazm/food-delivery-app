@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
-import RestaurantCard from "./RestaurantCard";
-import sanityClient from "../sanity.js";
+import { ScrollView, Text, View } from "react-native";
+import { ArrowRightIcon } from "react-native-heroicons/outline";
 
-const FeaturedRow = ({ id, title, description }) => {
-  const [restaurants, setRestaurants] = useState();
+import sanityClient from "../sanity";
+import RestaurantCard from "./RestaurantCard";
+
+export default function FeatureRow({ id, title, description }) {
+  const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
     sanityClient
@@ -29,35 +30,32 @@ const FeaturedRow = ({ id, title, description }) => {
       });
   }, [id]);
 
-  console.log("restaurants", restaurants);
-
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
         <Text className="font-bold text-lg">{title}</Text>
-        <Icon name="arrow-right" size={20} color="#00CCBB" />
+        <ArrowRightIcon color="#00CCBB" />
       </View>
-
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
-
       <ScrollView
         horizontal
-        contentContainerStyle={{ paddingHorizontal: 15 }}
-        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingHorizontal: 15,
+        }}
+        showsHorizontalScrollIndicator={false}
         className="pt-4"
       >
-        {/* RestaurantCard */}
         {restaurants?.map((restaurant) => (
           <RestaurantCard
             key={restaurant._id}
             id={restaurant._id}
             imgUrl={restaurant.image}
-            address={restaurant.address}
             title={restaurant.name}
-            dishes={restaurant.dishes}
             rating={restaurant.rating}
-            short_description={restaurant.short_description}
             genre={restaurant.type?.name}
+            address={restaurant.address}
+            short_description={restaurant.short_description}
+            dishes={restaurant.dishes}
             long={restaurant.long}
             lat={restaurant.lat}
           />
@@ -65,6 +63,4 @@ const FeaturedRow = ({ id, title, description }) => {
       </ScrollView>
     </View>
   );
-};
-
-export default FeaturedRow;
+}
