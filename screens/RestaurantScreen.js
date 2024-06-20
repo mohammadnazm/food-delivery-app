@@ -8,6 +8,7 @@ import {
 } from "react-native-heroicons/solid";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { urlFor } from "../sanity";
+import DishRow from "../components/DishRows";
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -92,6 +93,17 @@ const RestaurantScreen = () => {
 
       <View>
         <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
+        {/* DishesRows */}
+        {dishes?.map((dish) => (
+          <DishRow
+            key={dish._id}
+            id={dish._id}
+            name={dish.name}
+            description={dish.short_description}
+            price={dish.price}
+            image={dish.image}
+          />
+        ))}
       </View>
     </ScrollView>
   );
